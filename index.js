@@ -8,6 +8,7 @@ const postRoute = require("./routes/posts");
 const categoriesRoute = require("./routes/categories");
 const multer = require("multer");
 const path = require("path");
+const PORT = process.env.PORT || 5000
 
 dotenv.config(); 
 app.use(express.json());
@@ -48,7 +49,7 @@ app.use("/images", express.static(path.join(__dirname, "/images")));
 // console.log("juiu");
 
 
-app.listen("5000", ()=>{
+app.listen(PORT, ()=>{
     console.log("Backend is running.");
 })
 
